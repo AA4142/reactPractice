@@ -1,0 +1,48 @@
+body{
+    font: 14px "Century Gothic", Futura, sans-serif;
+}
+
+
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 700px;
+    background-color: #007F6F;
+    filter: drop-shadow(0 0 2px black);
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #D4D700;
+
+}
+
+/*========Board=================*/
+.board{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    text-align: center;
+    color: white;
+}
+
+.game-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*=======Squares===============*/
+.square{
+    background: red;
+}
