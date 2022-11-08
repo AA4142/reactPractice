@@ -5,11 +5,30 @@ import './index.css';
 
 
 class Square extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            value:null,
+        }
+    }
+
+
+
     render(){
         return(
-            <button className="square">
-                {/*todo*/}
+            <button
+             className="square"
+             onClick={() =>{
+                if(this.state.value == 'X'){
+                    this.setState({value: ''})
+                } else{
+                    this.setState({value: 'X'})
+                }
+
+            }}>
+                {this.state.value}
             </button>
+            
         );
     }
 }
@@ -26,6 +45,7 @@ class Board extends React.Component{
         <div className="game-container">
             <div className="header"><h1>Gomoku!</h1></div>
             <div className="row-container">
+                <p>First to get 5 in a row wins</p>
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
